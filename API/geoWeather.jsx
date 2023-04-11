@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Home = () => {
+const geoWeather = () => {
   const baseURL = "http://api.openweathermap.org/data/2.5/weather";
   const [weatherData, setWeatherData] = useState(null);
 
@@ -20,7 +20,7 @@ const Home = () => {
           setLocation({
             latitude: position.coords.latitude,
             longitude: position.coords.longitude,
-            geolocated: true,
+            geoLocated: true,
           });
         },
         (error) => {
@@ -79,4 +79,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default geoWeather;
